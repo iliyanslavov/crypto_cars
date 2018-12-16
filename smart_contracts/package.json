@@ -1,0 +1,16 @@
+{
+  "name": "cryptocars",
+  "version": "1.0.0",
+  "description": "Solidity blockchain project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Iliyan Slavov",
+  "license": "ISC",
+  "dependencies": {
+    "etherlime": "^0.9.8",
+    "i": "^0.3.6",
+    "openzeppelin-solidity": "^1.12.0"
+  }
+}

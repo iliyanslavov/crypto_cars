@@ -1,0 +1,108 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1>Crypto Cars</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 text-center">
+      <input type="text" [(ngModel)]="address" placeholder="0x...">
+      <button class="btn btn-info" (click)="getCarOwnersCars()">Get Car Owners Cars</button>
+    </div>
+  </div>
+  <div class="row" *ngIf="cars">
+    <div *ngFor="let car of cars" class="col-12 text-center align-self-center billboard">{{car}}</div>
+    <div class="col-12 text-center align-self-center billboard">Whei spent amount: {{moneySpent}}</div>
+  </div>
+  <br>
+  <hr>
+  <div class="row">
+    <div class="col no-gutters">
+      <div class="card">
+        <div class=" card-body ">
+          <h5 class="card-title ">Checks how much money have been spent by an address</h5>
+          <div>
+            <input type="text" [(ngModel)]="address" placeholder="0x...">
+            <button class="btn btn-info" (click)="moneySpent()">Check</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <hr>
+   <br>
+  <hr>
+  <div class="row">
+    <div class="col no-gutters">
+      <div class="card">
+        <div class=" card-body ">
+          <h5 class="card-title ">Checks how much money car owner have been spent for a car</h5>
+          <div>
+            <input type="text" [(ngModel)]="address" placeholder="0x...">
+            <input type="text" [(ngModel)]="carBrand" placeholder="car brand">
+            <input type="text" [(ngModel)]="carModel" placeholder="car model">
+            <button class="btn btn-info" (click)="getBoughtCarPrice()">Check</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <br>
+  <div class="row">
+    <div class="col no-gutters">
+      <div class="card">
+        <div class=" card-body ">
+          <h5 class="card-title ">Add car to dealer</h5>
+          <div>
+            <input type="text" [(ngModel)]="carDealer" placeholder="Pass car dealer name">
+            <input type="text" [(ngModel)]="brand" placeholder="Pass car brand">
+            <input type="text" [(ngModel)]="model" placeholder="Pass car model">
+            <input type="text" [(ngModel)]="manufacturerPrice" placeholder="Pass car manufacturer price">
+            <input type="text" [(ngModel)]="salePrice" placeholder="Pass car sale price">
+            <input type="text" [(ngModel)]="pictureHash" placeholder="Pass ipfs picture hash">
+            <input type="text" [(ngModel)]="password" placeholder="Your password">
+            <button class="btn btn-info" (click)="addCarToDealer()">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col no-gutters">
+      <div class="card">
+        <div class=" card-body ">
+          <h5 class="card-title ">Buy car from dealer</h5>
+          <div>
+            <input type="text" [(ngModel)]="carDealerAddress" placeholder="Pass car dealer address">
+            <input type="text" [(ngModel)]="carDealer" placeholder="Pass car dealer name">
+            <input type="text" [(ngModel)]="brand" placeholder="Pass car brand">
+            <input type="text" [(ngModel)]="model" placeholder="Pass car model">
+            <input type="text" [(ngModel)]="buyerName" placeholder="Your name">
+            <input type="text" [(ngModel)]="password" placeholder="Your password">
+            <button class="btn btn-info" (click)="buyCarFromDealer()">Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col no-gutters">
+      <div class="card">
+        <div class=" card-body ">
+          <h5 class="card-title ">Create Wallet</h5>
+          <div>
+            <input type="password" [(ngModel)]="encryptPassword" placeholder="Your password">
+            <button class="btn btn-info" (click)="createWallet()">Create Wallet</button>
+            <button class="btn btn-info" (click)="downloadOldJSONFile()">Download encrypted Json</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
